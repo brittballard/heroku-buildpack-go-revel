@@ -155,7 +155,7 @@ export CGO_ENABLED=0
 
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
-echo $HOME
+echo $PATH
 export PATH=$HOME/bin/dep:$PATH
 dep ensure
 
