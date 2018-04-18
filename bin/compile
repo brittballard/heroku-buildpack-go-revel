@@ -151,10 +151,10 @@ unset GIT_DIR # unset git dir or it will mess with goinstall
 cd $p
 
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-dep ensure
 export CGO_ENABLED=0
 
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin:$HOME/bin/dep' > $build/.profile.d/go.sh
+dep ensure
 
 go get github.com/revel/cmd/revel
