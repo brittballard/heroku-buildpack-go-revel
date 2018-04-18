@@ -153,4 +153,5 @@ cd $p
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
 
+curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 go get github.com/revel/cmd/revel
