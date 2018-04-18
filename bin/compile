@@ -119,10 +119,6 @@ then
     echo -n "       Installing Bazaar..."
     pip install bzr > /dev/null 2>&1
     echo " done"
-
-    echo -n "       Installing Dep..."
-    curl https://raw.githubusercontent.com/golang/dep/master/install.sh > /dev/null 2>&1
-    echo " done"
 fi
 
 p=$GOPATH/src/$name
@@ -153,6 +149,8 @@ fi
 
 unset GIT_DIR # unset git dir or it will mess with goinstall
 cd $p
+
+curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
