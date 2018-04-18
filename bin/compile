@@ -158,9 +158,7 @@ echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
 export PATH=$build/bin:$PATH
 
 echo -n " dep ensuring"
-echo $p
-cd $p
-dep ensure
+dep ensure -v
 echo " done"
 
 go get github.com/revel/cmd/revel
