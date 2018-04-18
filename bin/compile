@@ -148,6 +148,7 @@ then
 fi
 
 unset GIT_DIR # unset git dir or it will mess with goinstall
+cd $p
 
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
