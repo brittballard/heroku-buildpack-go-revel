@@ -153,6 +153,6 @@ cd $p
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 mkdir -p $build/.profile.d
-echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
+echo 'PATH=$PATH:$HOME/bin:$HOME/bin/dep' > $build/.profile.d/go.sh
 
 go get github.com/revel/cmd/revel
