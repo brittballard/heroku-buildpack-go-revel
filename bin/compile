@@ -147,6 +147,8 @@ then
     FLAGS=(${FLAGS[@]} -ldflags "-X $git_describe_symbol $git_describe")
 fi
 
+unset GIT_DIR # unset git dir or it will mess with goinstall
+
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
 
