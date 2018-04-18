@@ -155,6 +155,8 @@ export CGO_ENABLED=0
 
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
-$HOME/bin/dep/dep ensure
+echo $HOME
+export PATH=$HOME/bin/dep:$PATH
+dep ensure
 
 go get github.com/revel/cmd/revel
